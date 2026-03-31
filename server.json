@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/movies",
+  "title": "movies",
+  "description": "Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no auth)",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/movies",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-movies",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@pipeworx/mcp-movies",
+      "version": "0.1.0"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/movies/mcp"
+    }
+  ]
+}

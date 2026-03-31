@@ -1,15 +1,13 @@
-# @pipeworx/mcp-movies
+# mcp-movies
 
-MCP server for movies and TV shows — search via [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/) and [TVmaze API](https://www.tvmaze.com/api) (both free, no auth required).
+Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no auth)
+
+Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_movies` | Search for movies by title or keyword via iTunes |
-| `search_tv_shows` | Search for TV shows by name via TVmaze |
-| `get_tv_show` | Get full TV show details including episode list |
-| `get_tv_schedule` | Get the TV broadcast schedule for a country and date |
 
 ## Quick Start
 
@@ -25,7 +23,7 @@ Add to your MCP client config:
 }
 ```
 
-Or run via CLI:
+Or use the CLI:
 
 ```bash
 npx pipeworx use movies

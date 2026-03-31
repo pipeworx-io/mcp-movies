@@ -1,13 +1,3 @@
-/**
- * Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no auth)
- *
- * Tools:
- * - search_movies: search for movies via iTunes Search API
- * - search_tv_shows: search for TV shows via TVmaze
- * - get_tv_show: get full TV show details including episode list via TVmaze
- * - get_tv_schedule: get today's (or any date's) TV broadcast schedule via TVmaze
- */
-
 interface McpToolDefinition {
   name: string;
   description: string;
@@ -23,10 +13,21 @@ interface McpToolExport {
   callTool: (name: string, args: Record<string, unknown>) => Promise<unknown>;
 }
 
+/**
+ * Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no auth)
+ *
+ * Tools:
+ * - search_movies: search for movies via iTunes Search API
+ * - search_tv_shows: search for TV shows via TVmaze
+ * - get_tv_show: get full TV show details including episode list via TVmaze
+ * - get_tv_schedule: get today's (or any date's) TV broadcast schedule via TVmaze
+ */
+
+
 const ITUNES_BASE = 'https://itunes.apple.com';
 const TVMAZE_BASE = 'https://api.tvmaze.com';
 
-// -- iTunes types ----------------------------------------------------------
+// ── iTunes types ──────────────────────────────────────────────────────
 
 type ItunesMovieResult = {
   trackName?: string;
@@ -50,7 +51,7 @@ type ItunesSearchResponse = {
   results: ItunesMovieResult[];
 };
 
-// -- TVmaze types ----------------------------------------------------------
+// ── TVmaze types ──────────────────────────────────────────────────────
 
 type TvmazeImage = {
   medium?: string;
@@ -116,7 +117,7 @@ type TvmazeScheduleEntry = {
   show: TvmazeShow;
 };
 
-// -- Tool definitions ------------------------------------------------------
+// ── Tool definitions ──────────────────────────────────────────────────
 
 const tools: McpToolExport['tools'] = [
   {
@@ -179,7 +180,7 @@ const tools: McpToolExport['tools'] = [
   },
 ];
 
-// -- callTool dispatcher ---------------------------------------------------
+// ── callTool dispatcher ───────────────────────────────────────────────
 
 async function callTool(name: string, args: Record<string, unknown>): Promise<unknown> {
   switch (name) {
@@ -199,7 +200,7 @@ async function callTool(name: string, args: Record<string, unknown>): Promise<un
   }
 }
 
-// -- Helpers ---------------------------------------------------------------
+// ── Helpers ───────────────────────────────────────────────────────────
 
 function stripHtml(html: string | null | undefined): string | null {
   if (!html) return null;
@@ -224,7 +225,7 @@ function formatShow(show: TvmazeShow) {
   };
 }
 
-// -- Tool implementations --------------------------------------------------
+// ── Tool implementations ──────────────────────────────────────────────
 
 async function searchMovies(query: string, limit: number) {
   const count = Math.min(25, Math.max(1, limit));
