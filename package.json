@@ -1,0 +1,17 @@
+{
+  "name": "@pipeworx/mcp-movies",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "MCP server for movies and TV shows — search via iTunes and TVmaze",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "pipeworx",
+    "movies"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
