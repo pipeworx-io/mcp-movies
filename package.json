@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-movies",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-f0874011ea7c74efe121bcc36ff24abe2e5f6dbc471124e8ae5415a2f2fddbac",
-    "sourceCommit": "6182c4cfebddb94950e060b5d2fca18f18ad1aca"
+    "sourceHash": "v1-7d672c91e4897a34f978639705a3ef4396f957fc1fe5a9cd3df57b44547ab071",
+    "sourceCommit": "774de7f685a75e02d0b828d24a7b94794102152c"
   }
 }
