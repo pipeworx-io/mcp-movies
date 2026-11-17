@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/movies",
-  "title": "Movies",
-  "description": "Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows, free, no…",
-  "version": "0.2.1",
+  "title": "Movies (Unofficial)",
+  "description": "Unofficial Movies MCP — wraps iTunes Search API (movies, free, no auth) and TVmaze API (TV shows…",
+  "version": "0.2.2",
   "websiteUrl": "https://pipeworx.io/packs/movies",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-movies",
